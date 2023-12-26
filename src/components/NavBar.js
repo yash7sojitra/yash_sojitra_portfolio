@@ -156,6 +156,7 @@ const NavBar = () => {
         </nav>
       </div>
 
+      {/* Mobile navigation  */}
       {isOpen ? (
         <motion.div
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
@@ -189,7 +190,7 @@ const NavBar = () => {
             />
           </nav>
 
-          <nav className="flex items-center justify-center flex-wrap mt-2">
+          <nav className="flex items-center justify-center flex-wrap mt-2 ">
             <motion.a
               href="https://twitter.com/yash_7_sojitra"
               target={"_blank"}
@@ -247,6 +248,7 @@ const NavBar = () => {
           </nav>
         </motion.div>
       ) : null}
+
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
       </div>
