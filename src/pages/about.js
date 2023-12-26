@@ -53,7 +53,7 @@ const about = () => {
                 About Me
               </h2>
               <p className="font-medium">
-                Hello, I'm Yash Sojitra, a passionate MERN Stack developer
+                Hello, I&apos;m Yash Sojitra, a passionate MERN Stack developer
                 specializing in web development and UI/UX design. I thrive on
                 crafting not only visually appealing but also highly functional
                 and user-centric digital experiences. Continuously seeking
@@ -62,15 +62,15 @@ const about = () => {
               </p>
               <p className="my-4 font-medium">
                 I believe that UI development is more than just writing code,
-                it's about solving complex problems and crafting seamless,
+                it&apos;s about solving complex problems and crafting seamless,
                 user-friendly interfaces that enhance the overall digital
                 experience..
               </p>
               <p className="font-medium">
-                Whether I'm engaged in web development or other digital
+                Whether I&apos;m engaged in web development or other digital
                 projects, my commitment to design excellence and user-centered
-                thinking remains constant. I'm excited about the opportunity to
-                bring my skills and passion to your next project.
+                thinking remains constant. I&apos;m excited about the
+                opportunity to bring my skills and passion to your next project.
               </p>
             </div>
 
