@@ -12,22 +12,59 @@ import typescriptlogo from "../../public/images/skills/typescript.png";
 import gitlogo from "../../public/images/skills/git.png";
 import tailwindlogo from "../../public/images/skills/tailwind.png";
 import mongodblogo from "../../public/images/skills/mongodb.png";
+import nextjslogo from "../../public/images/skills/nextjs.png";
+import nextauthlogo from "../../public/images/skills/nextauth.png";
+import shadcnlogo from "../../public/images/skills/shadcn.png";
+import stripelogo from "../../public/images/skills/stripe.png";
+import prismalogo from "../../public/images/skills/prisma.png";
+import postgreslogo from "../../public/images/skills/postgres.png";
+import githublogo from "../../public/images/skills/github.png";
+import plotlylogo from "../../public/images/skills/plotly.png";
+import mysqllogo from "../../public/images/skills/mysql.png";
+import reactflowlogo from "../../public/images/skills/reactflow.png";
 
 const SKILL_LIST = [
-  { name: "React", url: reactlogo, bgColor: "#025a86" },
-  { name: "Redux", url: reduxlogo, bgColor: "#f0e8fb" },
-  { name: "Node", url: nodelogo, bgColor: "#dcefe8" },
-  { name: "Git", url: gitlogo, bgColor: "#E7D1CA" },
-  { name: "Javascript", url: javascriptlogo, bgColor: "#fff5c4" },
-  { name: "HTML", url: htmllogo, bgColor: "#FFD6B7" },
-  { name: "Tailwind", url: tailwindlogo, bgColor: "#f6e9e9" },
-  { name: "C++", url: cpplogo, bgColor: "#e3f0f2" },
-  { name: "Mongodb", url: mongodblogo, bgColor: "#f0e8fb" },
-  { name: "CSS", url: csslogo, bgColor: "#DAF2FD" },
-  { name: "Typescript", url: typescriptlogo, bgColor: "#fae6d5" },
+  // Frontend Core
+  { name: "React", url: reactlogo },
+  { name: "NextJs", url: nextjslogo },
+  { name: "Typescript", url: typescriptlogo },
+  { name: "Tailwind", url: tailwindlogo },
+
+  // UI & UX Enhancers
+  { name: "Shadcn/ui", url: shadcnlogo },
+  { name: "Plotly", url: plotlylogo },
+  { name: "React Flow", url: reactflowlogo },
+
+  // Backend & API
+  { name: "Node", url: nodelogo },
+  { name: "Prisma", url: prismalogo },
+
+  // Auth & Payments
+  { name: "NextAuth", url: nextauthlogo },
+  { name: "Stripe", url: stripelogo },
+
+  // Databases
+  { name: "Postgres", url: postgreslogo },
+  { name: "Mongodb", url: mongodblogo },
+  { name: "MySQL", url: mysqllogo },
+
+  // State Management
+  { name: "Redux", url: reduxlogo },
+
+  // DevOps & Tools
+  { name: "Git", url: gitlogo },
+  { name: "GitHub", url: githublogo },
+
+  // Web Foundations
+  { name: "Javascript", url: javascriptlogo },
+  { name: "HTML", url: htmllogo },
+  { name: "CSS", url: csslogo },
+
+  // Other Languages
+  { name: "C++", url: cpplogo },
 ];
 
-const Skill = ({ name, url, bgColor }) => {
+const Skill = ({ name, url }) => {
   return (
     <motion.div
       className="flex flex-col items-center justify-center text-center m-4 shadow-dark cursor-pointer"
@@ -36,12 +73,11 @@ const Skill = ({ name, url, bgColor }) => {
       whileInView={{ scale: 1, opacity: 1 }}
     >
       <div
-        style={{ backgroundColor: `${bgColor}` }}
-        className={`flex justify-center items-center  w-[120px] h-[120px] lg:w-[90px] lg:h-[90px] sm:w-[70px] sm:h-[70px]  rounded-full border-[1px] `}
+        className={`flex justify-center items-center  w-[120px] h-[120px] lg:w-[90px] lg:h-[90px] sm:w-[70px] sm:h-[70px]  rounded-full `}
       >
-        <Image src={url} alt={name} className="w-1/2 h-1/2" />
+        <Image src={url} alt={name} className="w-1/2 h-1/2 object-contain" />
       </div>
-      <p className="mt-4">{name}</p>
+      <p className="mt-2">{name}</p>
     </motion.div>
   );
 };
@@ -73,7 +109,8 @@ const Skills = () => {
         <Skill name="SQL" x="34vw" y="12vw" />
       </div> */}
       <div className="mt-16 flex justify-center items-center">
-        <div className="grid w-[80%] grid-cols-4 gap-10  md:grid-cols-3 md:gap-8 ">
+        {/* <div className="grid w-[80%] grid-cols-4 gap-10  md:grid-cols-3 md:gap-8 "> */}
+        <div className="flex flex-wrap gap-5 w-3/4">
           {SKILL_LIST.map((skill) => (
             <Skill
               key={skill.name}

@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import profilePic from "../../public/images/profile/d.png";
+import profilePic from "../../public/images/profile/dev.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
@@ -48,29 +48,36 @@ const about = () => {
             className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 ">
-            <div className="col-span-3  flex flex-col items-start  justify-start xl:col-span-4 md:order-2 md:col-span-8">
+            <div className="col-span-3  flex flex-col items-start gap-5  justify-start xl:col-span-4 md:order-2 md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 About Me
               </h2>
               <p className="font-medium">
-                Hello, I&apos;m Yash Sojitra, a passionate MERN Stack developer
-                specializing in web development and UI/UX design. I thrive on
-                crafting not only visually appealing but also highly functional
-                and user-centric digital experiences. Continuously seeking
-                innovative approaches, I am dedicated to transforming creative
-                concepts into dynamic and seamless online solutions.
-              </p>
-              <p className="my-4 font-medium">
-                I believe that UI development is more than just writing code,
-                it&apos;s about solving complex problems and crafting seamless,
-                user-friendly interfaces that enhance the overall digital
-                experience..
+                Hi, I&apos;m Yash Sojitra, a passionate Full Stack Developer
+                with strong expertise in Next.js, TypeScript, and modern web
+                technologies. I focus on building dynamic, user-centric web
+                applications that are both visually appealing and highly
+                functional.
               </p>
               <p className="font-medium">
-                Whether I&apos;m engaged in web development or other digital
-                projects, my commitment to design excellence and user-centered
-                thinking remains constant. I&apos;m excited about the
-                opportunity to bring my skills and passion to your next project.
+                My experience includes developing full-featured platforms with
+                AI-powered features, interactive data visualizations,
+                drag-and-drop interfaces, and secure systems with authentication
+                and payment integration. I&apos;ve handled projects
+                end-to-end—from writing clean, scalable code to deploying
+                production-ready applications.
+              </p>
+              <p className="font-medium">
+                I believe frontend development is not just about writing
+                code—it&apos;s about solving real problems and delivering
+                seamless digital experiences. I&apos;m always eager to explore
+                new technologies, improve performance, and bring creative ideas
+                to life.
+              </p>
+              <p className="font-medium">
+                Whether it&apos;s building from scratch or optimizing existing
+                systems, I bring a strong sense of ownership and a user-first
+                mindset to every project.
               </p>
             </div>
 
@@ -87,25 +94,25 @@ const about = () => {
             </div>
 
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
-              {/* <div className="flex flex-col items-end justify-center xl:items-center">
+              <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value="50" />+
+                  <AnimatedNumbers value="1" />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Satisfied Clients
                 </h2>
-              </div> */}
-              {/* <div className="flex flex-col items-end justify-center xl:items-center">
+              </div>
+              <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value="40" />+
+                  <AnimatedNumbers value="2" />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Projects Completed
                 </h2>
-              </div> */}
+              </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value="0.5" />
+                  <AnimatedNumbers value="1" />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   years of experience
@@ -114,7 +121,7 @@ const about = () => {
             </div>
           </div>
           <Skills />
-          {/* <Experience /> */}
+          <Experience />
           <Education />
         </Layout>
       </main>

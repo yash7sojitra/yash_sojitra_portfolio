@@ -28,7 +28,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
           {time} | {address}
         </span>
-        <p className="font-medium w-full md:text-sm">{work}</p>
+        <p className="font-medium w-full md:text-sm mt-2">{work}</p>
       </motion.div>
     </li>
   );
@@ -52,54 +52,12 @@ const Experience = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            position="Software Engineer"
-            company="Google"
-            companyLink="www.google.com"
-            time="2022-Present"
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's 
-                  search engine, including improving the accuracy and relevance of search results and 
-                  developing new tools for data analysis and visualization."
-          />
-          <Details
-            position="Software Engineer"
-            company="Google"
-            companyLink="www.google.com"
-            time="2022-Present"
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's 
-                  search engine, including improving the accuracy and relevance of search results and 
-                  developing new tools for data analysis and visualization."
-          />
-          <Details
-            position="Software Engineer"
-            company="Google"
-            companyLink="www.google.com"
-            time="2022-Present"
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's 
-                  search engine, including improving the accuracy and relevance of search results and 
-                  developing new tools for data analysis and visualization."
-          />
-          <Details
-            position="Software Engineer"
-            company="Google"
-            companyLink="www.google.com"
-            time="2022-Present"
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's 
-                  search engine, including improving the accuracy and relevance of search results and 
-                  developing new tools for data analysis and visualization."
-          />
-          <Details
-            position="Software Engineer"
-            company="Google"
-            companyLink="www.google.com"
-            time="2022-Present"
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's 
-                  search engine, including improving the accuracy and relevance of search results and 
-                  developing new tools for data analysis and visualization."
+            position="Full Stack Developer"
+            company="Sanatan Tech Innovations Pvt. Ltd."
+            companyLink="https://sanatantech.com/"
+            time="Jan 2024-Present"
+            address="Ahmedabad, India"
+            work="Developed AI-powered platforms with interactive visualizations and drag-and-drop interfaces. Integrated REST APIs, secure authentication, and payment systems to deliver full-stack functionality. Led deployment workflows and performance optimizations, collaborating with teams to enhance AI-driven content generation and ensure smooth production delivery."
           />
         </ul>
       </div>

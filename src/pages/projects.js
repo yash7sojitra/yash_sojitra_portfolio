@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import promptopia from "../../public/images/projects/promptopia.png";
+import storyprism from "../../public/images/projects/storyprism.jpg";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -46,15 +47,18 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
           {summary}
         </p>
-        <div className="mt-2 flex  items-center ">
-          <Link href={github} target="_blank" className="w-10">
-            <GithubIcon />
-          </Link>
+        <div className="mt-2 flex items-center">
+          {github && (
+            <Link href={github} target="_blank" className="w-10">
+              <GithubIcon />
+            </Link>
+          )}
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light dark:bg-light dark:text-dark p-2 px-6 text-lg font-semibold
-            sm:px-4 sm:text-base"
+            className={`ml-4 rounded-lg bg-dark text-light dark:bg-light dark:text-dark p-2 px-6 text-lg font-semibold sm:px-4 sm:text-base ${
+              !github ? "ml-0" : ""
+            }`}
           >
             Visit Project
           </Link>
@@ -119,21 +123,33 @@ const projects = () => {
     <>
       <Head>
         <title>Yash Sojitra | Projects </title>
-        <meta name="description" content="About Yash Sojitra" />
+        <meta
+          name="description"
+          content="Explore the projects by Yash Sojitra, showcasing creativity and technical expertise."
+        />
       </Head>
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            text="Imagination Trumps Knowledge!"
+            text="Turning Ideas Into Reality!"
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl  xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
+                title="Storypism.io"
+                img={storyprism}
+                summary="StoryPrism is an AI-powered story writing platform that lets users visually organize their ideas with a drag-and-drop canvas, write and format screenplays, and generate content with intelligent assistance. It offers secure access, flexible subscription plans, and a seamless creative experience."
+                link="https://storyprism.io/"
+                type="Client Project @Sanatan Tech Innovations Pvt. Ltd."
+              />
+            </div>
+            <div className="col-span-12">
+              <FeaturedProject
                 title="Promptopia"
                 img={promptopia}
-                summary="Promptia is an open-source AI prompting tool for modern world to discover, create and share creative prompts. Built with Next.js and NextAuth for a seamless and secure experience."
+                summary="Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts. Built with Next.js and NextAuth for a seamless and secure experience."
                 link="https://nextjs-promptopia-orpin.vercel.app/"
                 github="https://github.com/yash7sojitra/nextjs_promptopia"
                 type="Featured Project"
@@ -141,10 +157,10 @@ const projects = () => {
             </div>
             {/* <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Crypto Screener Application"
-                img={project1}
-                link="/"
-                github="/"
+                title="Promptopia"
+                img={promptopia}
+                link="https://nextjs-promptopia-orpin.vercel.app/"
+                github="https://github.com/yash7sojitra/nextjs_promptopia"
                 type="Featured Project"
               />
             </div> */}
